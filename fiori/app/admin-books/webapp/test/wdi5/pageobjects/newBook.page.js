@@ -80,14 +80,15 @@ class NewBook {
          */
 
         async iSeeEditButton() {
-                await browser.asControl({
-                        selector: {
-                        id: "fe::StandardAction::Edit",
-                        viewId: "books::BooksDetailsList",
-                        interaction: {
-                                idSuffix: "BDI-content"
-                        }
-                }});
+const editButton = await browser.asControl({
+                         selector: {
+                         id: "fe::StandardAction::Edit",
+                         viewId: "books::BooksDetailsList",
+                         interaction: {
+                                 idSuffix: "BDI-content"
+                         }
+                 }});
+                 expect(editButton.isInitialized()).toBeTruthy()
         }
 
 }
