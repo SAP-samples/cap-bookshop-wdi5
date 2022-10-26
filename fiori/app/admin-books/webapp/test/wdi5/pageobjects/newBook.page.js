@@ -47,32 +47,35 @@ class NewBook {
                 }).press();
                 await browser.asControl({
                         selector: {
-                        controlType: "sap.m.Text",
-                        viewId: "books::BooksDetailsList",
-                        bindingPath: {
-                                path: "/Authors(ID=107,IsActiveEntity=true)",
-                                propertyPath: "name"
-                        },
-                        searchOpenDialogs: true
-                }}).press();
+                                controlType: "sap.m.Text",
+                                viewId: "books::BooksDetailsList",
+                                bindingPath: {
+                                        path: "/Authors(ID=107,IsActiveEntity=true)",
+                                        propertyPath: "name"
+                                },
+                                searchOpenDialogs: true
+                        }
+                }).press();
         }
 
         async iClickOnCreateButton() {
                 await browser.asControl({
                         selector: {
-                        id: "fe::FooterBar::StandardAction::Save",
-                        viewId: "books::BooksDetailsList",
-                        interaction: {
-                                idSuffix: "BDI-content"
+                                id: "fe::FooterBar::StandardAction::Save",
+                                viewId: "books::BooksDetailsList",
+                                interaction: {
+                                        idSuffix: "BDI-content"
+                                }
                         }
-                }}).press();
+                }).press();
         }
 
         async iNavigateBack() {
                 await browser.asControl({
                         selector: {
-                        id: "backBtn"
-                }}).press();
+                                id: "backBtn"
+                        }
+                }).press();
         }
 
         /**
@@ -80,17 +83,17 @@ class NewBook {
          */
 
         async iSeeEditButton() {
-const editButton = await browser.asControl({
-                         selector: {
-                         id: "fe::StandardAction::Edit",
-                         viewId: "books::BooksDetailsList",
-                         interaction: {
-                                 idSuffix: "BDI-content"
-                         }
-                 }});
-                 expect(editButton.isInitialized()).toBeTruthy()
+                const editButton = await browser.asControl({
+                        selector: {
+                                id: "fe::StandardAction::Edit",
+                                viewId: "books::BooksDetailsList",
+                                interaction: {
+                                        idSuffix: "BDI-content"
+                                }
+                        }
+                });
+                expect(editButton.isInitialized()).toBeTruthy()
         }
-
 }
 
 
