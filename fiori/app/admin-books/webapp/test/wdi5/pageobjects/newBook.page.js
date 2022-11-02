@@ -1,10 +1,9 @@
-class NewBook {
-
+module.exports = {
         /**
          * define actions for the page object
          */
 
-        async iEnterTitle(sBook) {
+        iEnterTitle: async (sBook) => {
                 await browser.asControl({
                         selector: {
                                 id: "books::BooksDetailsList--fe::EditableHeaderForm::EditableHeaderTitle::Field-edit",
@@ -13,9 +12,9 @@ class NewBook {
                                 }
                         }
                 }).enterText(sBook);
-        }
+        },
 
-        async iSelectGenre() {
+        iSelectGenre: async () => {
                 await browser.asControl({
                         selector: {
                                 id: "books::BooksDetailsList--fe::FormContainer::FieldGroup::General::FormElement::DataField::genre_ID::Field-edit-inner-vhi"
@@ -37,9 +36,9 @@ class NewBook {
                                 }
                         }
                 }).press();
-        }
+        },
 
-        async iSelectAuthor() {
+        iSelectAuthor: async() => {
                 await browser.asControl({
                         selector: {
                                 id: "books::BooksDetailsList--fe::FormContainer::FieldGroup::General::FormElement::DataField::author_ID::Field-edit-inner-vhi"
@@ -56,9 +55,9 @@ class NewBook {
                                 searchOpenDialogs: true
                         }
                 }).press();
-        }
+        },
 
-        async iClickOnCreateButton() {
+        iClickOnCreateButton: async () => {
                 await browser.asControl({
                         selector: {
                                 id: "fe::FooterBar::StandardAction::Save",
@@ -68,21 +67,21 @@ class NewBook {
                                 }
                         }
                 }).press();
-        }
+        },
 
-        async iNavigateBack() {
+        iNavigateBack: async () => {
                 await browser.asControl({
                         selector: {
                                 id: "backBtn"
                         }
                 }).press();
-        }
+        },
 
         /**
          * define assertions for the page object
          */
 
-        async iSeeEditButton() {
+        iSeeEditButton: async function() {
                 const editButton = await browser.asControl({
                         selector: {
                                 id: "fe::StandardAction::Edit",
@@ -94,7 +93,4 @@ class NewBook {
                 });
                 expect(editButton.isInitialized()).toBeTruthy()
         }
-}
-
-
-module.exports = new NewBook();
+};

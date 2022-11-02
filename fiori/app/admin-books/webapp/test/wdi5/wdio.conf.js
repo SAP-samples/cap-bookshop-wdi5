@@ -121,7 +121,7 @@ exports.config = {
     logLevel: "error", // [optional] error | verbose | silent, default: "error"
     url: "fiori-apps.html#Books-manage", // "fiori.html#manage-books",
     skipInjectUI5OnStart: false, // [optional] {boolean}, default: false; true when UI5 is not on the start page, you need to later call <wdioUI5service>.injectUI5() manually
-    waitForUI5Timeout: 15000, // [optional] {number}, default: 15000; maximum waiting time in milliseconds while checking for UI5 availability
+    waitForUI5Timeout: 30000, // [optional] {number}, default: 15000; maximum waiting time in milliseconds while checking for UI5 availability
   },
 
   // Framework you want to run your specs with.
