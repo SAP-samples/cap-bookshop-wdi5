@@ -21,7 +21,7 @@ module.exports = {
   theBookListContains: async (sBook) => {
     const text = await browser.asControl({
       selector: {
-        controlType: "sap.m.Link",
+        controlType: "sap.m.Text",
         viewId: "books::BooksList",
         properties: {
           text: sBook

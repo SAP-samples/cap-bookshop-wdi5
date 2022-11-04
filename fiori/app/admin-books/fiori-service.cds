@@ -1,4 +1,4 @@
-using { AdminService } from '@capire/bookstore';
+using { AdminService } from '@capire/bookshop';
 using from '../common'; // to help UI linter get the complete annotations
 
 ////////////////////////////////////////////////////////////////////////////
