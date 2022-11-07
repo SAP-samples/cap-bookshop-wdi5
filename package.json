@@ -1,46 +1,41 @@
 {
-  "name": "@capire/samples",
-  "version": "2.0.0",
-  "description": "A monorepo with several samples for CAP.",
-  "repository": "https://github.com/sap-samples/cloud-cap-samples.git",
-  "author": "daniel.hutzel@sap.com",
-  "dependencies": {
-    "@sap/cds": ">=5.5.3",
-    "@sap/cds-odata-v2-adapter-proxy": "^1.9.0"
-  },
-  "workspaces": [
-    "./bookshop",
-    "./common",
-    "./fiori",
-    "./bookstore",
-    "./data-viewer",
-    "./orders",
-    "./reviews"
-  ],
-  "devDependencies": {
-    "axios": "^1",
-    "chai": "^4.3.4",
-    "chai-as-promised": "^7.1.1",
-    "chai-subset": "^1.6.0",
-    "semver": "^7",
-    "sqlite3": "^5",
-    "@wdio/junit-reporter": "^7.16.15",
-    "@wdio/local-runner": "^7.16.16",
-    "@wdio/mocha-framework": "^7.16.15",
-    "@wdio/spec-reporter": "^7.16.14",
-    "chromedriver": "latest",
-    "wdio-chromedriver-service": "^7.2.8",
-    "wdio-timeline-reporter": "^5.1.4",
-    "wdio-ui5-service": "latest"
-  },
-  "scripts": {
-    "cleanup": "rm -rf node_modules && rm -rf */node_modules && rm -rf */*/node_modules",
-    "bookshop": "cds watch bookshop",
-    "fioriOld": "cds watch fioriOld",
-    "fiori": "cds watch fiori",    
-    "start": "cds watch fiori",
-    "wdi5": "wdio ./fiori/app/admin-books/webapp/test/wdi5/wdio.conf.js"
-  },
-  "license": "SAP SAMPLE CODE LICENSE",
-  "private": true
+    "name": "@capire/samples",
+    "version": "2.0.0",
+    "description": "A monorepo with several samples for CAP.",
+    "repository": "https://github.com/sap-samples/cloud-cap-samples.git",
+    "author": "daniel.hutzel@sap.com",
+    "dependencies": {
+        "@sap/cds": ">=5.5.3",
+        "@sap/cds-odata-v2-adapter-proxy": "^1.9.0"
+    },
+    "workspaces": [
+        "./bookshop",
+        "./fiori"
+    ],
+    "devDependencies": {
+        "axios": "^1",
+        "chai": "^4.3.4",
+        "chai-as-promised": "^7.1.1",
+        "chai-subset": "^1.6.0",
+        "semver": "^7",
+        "sqlite3": "^5",
+        "@wdio/junit-reporter": "^7.16.15",
+        "@wdio/local-runner": "^7.16.16",
+        "@wdio/mocha-framework": "^7.16.15",
+        "@wdio/spec-reporter": "^7.16.14",
+        "chromedriver": "latest",
+        "wdio-chromedriver-service": "^7.2.8",
+        "wdio-timeline-reporter": "^5.1.4",
+        "wdio-ui5-service": "latest"
+    },
+    "scripts": {
+        "cleanup": "rm -rf node_modules && rm -rf */node_modules && rm -rf */*/node_modules",
+        "bookshop": "cds watch bookshop",
+        "fioriOld": "cds watch fioriOld",
+        "fiori": "cds watch fiori",
+        "start": "cds watch fiori",
+        "wdi5": "wdio ./fiori/app/admin-books/webapp/test/wdi5/wdio.conf.js"
+    },
+    "license": "SAP SAMPLE CODE LICENSE",
+    "private": true
 }

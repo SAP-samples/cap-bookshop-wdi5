@@ -38,7 +38,7 @@ module.exports = {
                 }).press();
         },
 
-        iSelectAuthor: async() => {
+        iSelectAuthor: async () => {
                 await browser.asControl({
                         selector: {
                                 id: "books::BooksDetailsList--fe::FormContainer::FieldGroup::General::FormElement::DataField::author_ID::Field-edit-inner-vhi"
@@ -49,7 +49,7 @@ module.exports = {
                                 controlType: "sap.m.Text",
                                 viewId: "books::BooksDetailsList",
                                 bindingPath: {
-                                        path: "/Authors(ID=107,IsActiveEntity=true)",
+                                        path: "/Authors(107)",
                                         propertyPath: "name"
                                 },
                                 searchOpenDialogs: true
@@ -81,7 +81,7 @@ module.exports = {
          * define assertions for the page object
          */
 
-        iSeeEditButton: async function() {
+        iSeeEditButton: async function () {
                 const editButton = await browser.asControl({
                         selector: {
                                 id: "fe::StandardAction::Edit",
