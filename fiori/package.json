@@ -2,7 +2,6 @@
     "name": "@capire/fiori",
     "version": "1.0.0",
     "dependencies": {
-        "@capire/bookstore": "*",
         "@sap/cds": ">=5",
         "@sap/cds-odata-v2-adapter-proxy": "^1.9.0",
         "express": "^4.17.1",
