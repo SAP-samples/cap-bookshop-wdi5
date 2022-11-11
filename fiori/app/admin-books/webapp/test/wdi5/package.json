@@ -17,5 +17,8 @@
     },
     "scripts": {
         "wdio": "wdio run wdio.conf.js"
+    },
+    "dependencies": {
+        "wdio-timeline-reporter": "^5.1.4"
     }
 }
