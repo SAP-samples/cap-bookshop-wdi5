@@ -10,7 +10,9 @@
     },
     "workspaces": [
         "./bookshop",
-        "./fiori"
+        "./fiori",
+        "./fiori/app/admin-books/webapp/test/wdi5"
+
     ],
     "devDependencies": {
         "axios": "^1",
