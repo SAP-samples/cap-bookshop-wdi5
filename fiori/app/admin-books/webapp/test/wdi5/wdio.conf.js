@@ -95,7 +95,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost:4004',
+    baseUrl: 'http://localhost:4004/fiori-apps.html#Books-manage',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -112,16 +112,6 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ["chromedriver", "ui5", [TimelineService]],
-
-    // ...
-    wdi5: {
-      screenshotPath: require("path").join("target", "screenshots"), // [optional] {string}, default: ""
-      screenshotsDisabled: false, // [optional] {boolean}, default: false; if set to true, screenshots won't be taken and not written to file system
-      logLevel: "error", // [optional] error | verbose | silent, default: "error"
-      url: "fiori-apps.html#Books-manage", // "fiori.html#manage-books",
-      skipInjectUI5OnStart: false, // [optional] {boolean}, default: false; true when UI5 is not on the start page, you need to later call <wdioUI5service>.injectUI5() manually
-      waitForUI5Timeout: 30000, // [optional] {number}, default: 15000; maximum waiting time in milliseconds while checking for UI5 availability
-    },
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
