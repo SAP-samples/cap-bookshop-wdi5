@@ -6,7 +6,7 @@ This default template for SAP Samples repositories includes files for README, LI
 ## Description
 This repository contains a CAP-based sample FIORI application. It is used in the following SAP tutorial for developers.
 
-https://developers.sap.com/tutorials/cp-wdi5-cap.html.html
+https://developers.sap.com/tutorials/cp-wdi5-cap.html
 
 ## Requirements & Installation
 
