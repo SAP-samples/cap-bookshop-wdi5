@@ -1,10 +1,7 @@
-## SAP-samples/repository-template
-This default template for SAP Samples repositories includes files for README, LICENSE, and .reuse/dep5. All repositories on github.com/SAP-samples will be created based on this template.
-
 # Automated System Tests for CAP-Based Projects
 
 ## Description
-This repository contains a CAP-based sample FIORI application. It is used in the following SAP tutorial for developers.
+This repository contains a sample SAP Fiori application based on SAP Cloud Application Programming Model (CAP). It is used in the following SAP tutorial for developers.
 
 https://developers.sap.com/tutorials/cp-wdi5-cap.html
 
