@@ -1,27 +1,67 @@
 {
-  "name": "@capire/bookshop",
-  "version": "1.0.0",
-  "description": "A simple self-contained bookshop service.",
-  "files": [
-    "app",
-    "srv",
-    "db",
-    "index.cds",
-    "index.js"
-  ],
-  "dependencies": {
-    "@sap/cds": ">=5.9",
-    "express": "^4.17.1",
-    "passport": ">=0.4.1"
-  },
-  "scripts": {
-    "genres": "cds serve test/genres.cds",
-    "start": "cds run",
-    "watch": "cds watch"
-  },
-  "cds": {
-    "requires": {
-      "db": "sql"
+    "name": "@capire/bookshop",
+    "version": "1.0.0",
+    "description": "A simple self-contained bookshop service.",
+    "files": [
+        "app",
+        "srv",
+        "db",
+        "index.cds",
+        "index.js"
+    ],
+    "dependencies": {
+        "@sap/cds": "^6.3.2",
+        "@sap/cds-odata-v2-adapter-proxy": "^1.9.0",
+        "express": "^4.17.1",
+        "passport": ">=0.4.1",
+        "hdb": "^0.19.0",
+        "@sap/xssec": "^3"
+    },
+    "devDependencies": {
+        "@wdio/cli": "^7.27.0",
+        "@wdio/local-runner": "^7.27.0",
+        "@wdio/mocha-framework": "^7.26.0",
+        "@wdio/spec-reporter": "^7.26.0",
+        "axios": "^1",
+        "chai": "^4.3.4",
+        "chai-as-promised": "^7.1.1",
+        "chai-subset": "^1.6.0",
+        "chromedriver": "latest",
+        "semver": "^7",
+        "sqlite3": "^5",
+        "wdio-chromedriver-service": "^7.3.2",
+        "wdio-timeline-reporter": "^5.1.4",
+        "wdio-ui5-service": "latest"
+    },
+    "scripts": {
+        "genres": "cds serve test/genres.cds",
+        "start": "cds run",
+        "watch": "cds watch",
+        "wdi5": "wdio app/admin-books/webapp/test/wdi5/wdio.conf.js"
+    },
+    "engines": {
+        "node": "^16"
+    },
+    "cds": {
+        "hana": {
+            "deploy-format": "hdbtable"
+        },
+        "requires": {
+            "db": "sql",
+            "auth": {
+                "kind": "dummy"
+            },
+            "[production]": {
+                "db": {
+                    "kind": "hana-cloud"
+                },
+                "auth": {
+                    "kind": "dummy"
+                },
+                "approuter": {
+                    "kind": "cloudfoundry"
+                }
+            }
+        }
     }
-  }
 }

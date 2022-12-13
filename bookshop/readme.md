@@ -1,31 +1,28 @@
-# Bookshop Getting Started Sample
+## SAP-samples/repository-template
+This default template for SAP Samples repositories includes files for README, LICENSE, and .reuse/dep5. All repositories on github.com/SAP-samples will be created based on this template.
 
-This stand-alone sample introduces the essential tasks in the development of CAP-based services as also covered in the [Getting Started guide in capire](https://cap.cloud.sap/docs/get-started/in-a-nutshell).
+# Automated System Tests for CAP-Based Projects
 
-## Hypothetical Use Cases
+## Description
+This repository contains a CAP-based sample FIORI application. It is used in the following SAP tutorial for developers.
 
-1. Build a service that allows to browse _Books_ and _Authors_.
-2. Books have assigned _Genres_, which are organized hierarchically.
-3. All users may browse books without login.
-4. All entries are maintained by Administrators.
-5. End users may order books (the actual order mgmt being out of scope).
+https://developers.sap.com/tutorials/cp-wdi5-cap.html
 
-## Running the Sample
+## Requirements & Installation
 
-```sh
-npm run watch
-```
+Refer to the prerequisites in the SAP tutorial above.
 
-## Content & Best Practices
+## Known Issues
 
-| Links to capire                                                                                           | Sample files / folders               |
-| --------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [Project Setup & Layouts](https://cap.cloud.sap/docs/get-started/projects#sharing-and-reusing-content)    | [`./`](./)                           |
-| [Domain Modeling with CDS](https://cap.cloud.sap/docs/guides/domain-models)                               | [`./db/schema.cds`](./db/schema.cds) |
-| [Defining Services](https://cap.cloud.sap/docs/guides/services#defining-services)                         | [`./srv/*.cds`](./srv)               |
-| [Single-purposed Services](https://cap.cloud.sap/docs/guides/services#single-purposed-services)           | [`./srv/*.cds`](./srv)               |
-| [Providing & Consuming Providers](https://cap.cloud.sap/docs/guides/providing-services)                   | http://localhost:4004                |
-| [Using Databases](https://cap.cloud.sap/docs/guides/databases)                                            | [`./db/data/*.csv`](./db/data)       |
-| [Adding Custom Logic](https://cap.cloud.sap/docs/guides/service-impl)                                     | [`./srv/*.js`](./srv)                |
-| Adding Tests                                                                                              | [`./test`](./test)                   |
-| [Sharing for Reuse](https://cap.cloud.sap/docs/guides/reuse-and-compose)                                  | [`./index.cds`](./index.cds)         |
+No known issues.
+
+## How to obtain support
+[Create an issue](https://github.com/SAP-samples/cap-bookshop-wdi5/issues) in this repository if you find a bug or have questions about the content.
+ 
+For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
+
+## Contributing
+If you wish to contribute code, offer fixes or improvements, please send a pull request. Due to legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
+
+## License
+Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
