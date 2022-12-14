@@ -24,6 +24,10 @@
             "-version": "1.40.12"
         }
     },
+    "sap.cloud": {
+        "public": true,
+        "service": "demo"
+    },
     "sap.ui5": {
         "dependencies": {
             "libs": {
