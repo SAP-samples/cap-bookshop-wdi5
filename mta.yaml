@@ -3,6 +3,7 @@ ID: capire.bookshop
 version: 1.0.0
 description: "A simple self-contained bookshop service."
 parameters:
+  deploy-mode: html5-repo
   enable-parallel-deployments: true
 build-parameters:
   before-all:
@@ -40,7 +41,12 @@ modules:
           url: ~{srv-url}
           forwardAuthToken: true
       - name: bookshop-auth
-
+      - name: capire.bookshop-destination-service
+        group: destinations
+        properties:
+          forwardAuthToken: false
+          name: ui5
+          url: https://ui5.sap.com
   - name: bookshop-db-deployer
     type: hdb
     path: gen/db
@@ -48,7 +54,30 @@ modules:
       buildpack: nodejs_buildpack
     requires:
       - name: bookshop-db
-
+  - name: capire.bookshop-app-content
+    type: com.sap.application.content
+    path: .
+    requires:
+    - name: capire.bookshop-repo-host
+      parameters:
+        content-target: true
+    build-parameters:
+      build-result: resources
+      requires:
+      - artifacts:
+        - admin-books.zip
+        name: admin-books
+        target-path: resources/
+  - name: admin-books
+    type: html5
+    path: app/admin-books
+    build-parameters:
+      build-result: dist
+      builder: custom
+      commands:
+      - npm install
+      - npm run build:cf
+      supported-platforms: []
 resources:
   - name: bookshop-auth
     type: org.cloudfoundry.managed-service
@@ -64,3 +93,27 @@ resources:
     parameters:
       service: hana
       service-plan: hdi-shared
+  - name: capire.bookshop-repo-host
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-name: capire.bookshop-html5-srv
+      service-plan: app-host
+  - name: capire.bookshop-destination-service
+    type: org.cloudfoundry.managed-service
+    parameters:
+      config:
+        HTML5Runtime_enabled: false
+        init_data:
+          instance:
+            destinations:
+            - Authentication: NoAuthentication
+              Name: ui5
+              ProxyType: Internet
+              Type: HTTP
+              URL: https://ui5.sap.com
+            existing_destinations_policy: update
+        version: 1.0.0
+      service: destination
+      service-name: capire.bookshop-destination-service
+      service-plan: lite
