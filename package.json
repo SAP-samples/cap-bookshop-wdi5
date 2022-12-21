@@ -18,8 +18,8 @@
         "@sap/cds-odata-v2-adapter-proxy": "^1.9.0",
         "@sap/xssec": "^3",
         "express": "^4.17.1",
-        "hdb": "^0.19.0",
-        "passport": ">=0.4.1"
+        "passport": ">=0.4.1",
+        "sqlite3": "^5"
     },
     "devDependencies": {
         "@sap/ux-specification": "^1.102.14",
@@ -34,7 +34,6 @@
         "chai-subset": "^1.6.0",
         "chromedriver": "latest",
         "semver": "^7",
-        "sqlite3": "^5",
         "wdio-chromedriver-service": "^7.3.2",
         "wdio-timeline-reporter": "^5.1.4",
         "wdio-ui5-service": "latest"
@@ -55,9 +54,6 @@
         "features": {
             "fiori_preview": true
         },
-        "hana": {
-            "deploy-format": "hdbtable"
-        },
         "requires": {
             "db": "sql",
             "auth": {
@@ -65,13 +61,24 @@
             },
             "[production]": {
                 "db": {
-                    "kind": "hana-cloud"
+                    "kind": "sqlite",
+                    "credentials": {
+                        "database": "wdi5.db"
+                    }
                 },
                 "auth": {
                     "kind": "dummy"
                 },
                 "approuter": {
                     "kind": "cloudfoundry"
+                }
+            },
+            "[development]": {
+                "db": {
+                    "kind": "sqlite",
+                    "credentials": {
+                        "database": "wdi5.db"
+                    }
                 }
             }
         }
