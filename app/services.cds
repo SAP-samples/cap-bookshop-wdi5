@@ -3,4 +3,4 @@
 */
 
 using from './admin-books/fiori-service';
-using from './common';
+using from './commonAnnotations';

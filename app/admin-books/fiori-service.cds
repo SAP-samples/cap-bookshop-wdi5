@@ -1,5 +1,5 @@
-using { AdminService } from '../../';
-using from '../common'; // to help UI linter get the complete annotations
+using { AdminService } from '../../srv/admin-service';
+using from '../commonAnnotations'; // to help UI linter get the complete annotations
 
 ////////////////////////////////////////////////////////////////////////////
 //

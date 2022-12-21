@@ -15,6 +15,7 @@
     ],
     "dependencies": {
         "@sap/cds": "^6.3.2",
+        "@sap/cds-dk": "^6.4.0",
         "@sap/cds-odata-v2-adapter-proxy": "^1.9.0",
         "@sap/xssec": "^3",
         "express": "^4.17.1",
@@ -23,7 +24,6 @@
     },
     "devDependencies": {
         "@sap/ux-specification": "^1.102.14",
-        "rimraf": "^3.0.2",
         "@wdio/cli": "^7.27.0",
         "@wdio/local-runner": "^7.27.0",
         "@wdio/mocha-framework": "^7.26.0",
@@ -33,6 +33,7 @@
         "chai-as-promised": "^7.1.1",
         "chai-subset": "^1.6.0",
         "chromedriver": "latest",
+        "rimraf": "^3.0.2",
         "semver": "^7",
         "wdio-chromedriver-service": "^7.3.2",
         "wdio-timeline-reporter": "^5.1.4",
@@ -40,11 +41,11 @@
     },
     "scripts": {
         "genres": "cds serve test/genres.cds",
-        "start": "cds run",
+        "start": "cds deploy && cds run",
         "watch": "cds watch",
         "undeploy": "cf undeploy capire-bookshop --delete-services --delete-service-keys --delete-service-brokers",
-        "build": "rimraf resources mta_archives && mbt build -s .",
-        "deploy": "cf deploy mta_archives/*.mtar -f",
+        "build": "rimraf resources && mbt build -t gen --mtar mta.tar",
+        "deploy": "cf deploy gen/mta.tar -f",
         "wdi5": "wdio app/admin-books/webapp/test/wdi5/wdio.conf.js"
     },
     "engines": {
@@ -68,9 +69,6 @@
                 },
                 "auth": {
                     "kind": "dummy"
-                },
-                "approuter": {
-                    "kind": "cloudfoundry"
                 }
             },
             "[development]": {

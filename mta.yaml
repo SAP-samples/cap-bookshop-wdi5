@@ -9,6 +9,13 @@ build-parameters:
     - builder: custom
       commands:
         - npx -p @sap/cds-dk cds build --production
+        # include the app in the deployment artifact
+        - cp -r app gen/srv/
+        # include the.cds for re-use in app
+        - cp srv/admin-service.cds gen/srv/srv/
+        - mkdir -p gen/srv/db
+        - cp db/schema.cds gen/srv/db/
+        - rm gen/srv/srv/csn.json
 modules:
   - name: bookshop-srv
     type: nodejs
@@ -23,21 +30,7 @@ modules:
           srv-url: ${default-url}
     requires:
       - name: bookshop-auth
-  - name: bookshop
-    type: approuter.nodejs
-    path: app/ # from cds.env.folders. Consider also cds.env.build.target -> gen/app
-    parameters:
-      keep-existing-routes: true
-      disk-quota: 256M
-      memory: 256M
-    requires:
-      - name: srv-api
-        group: destinations
-        properties:
-          name: srv-api # must be used in xs-app.json as well
-          url: ~{srv-url}
-          forwardAuthToken: true
-      - name: bookshop-auth
+
 resources:
   - name: bookshop-auth
     type: org.cloudfoundry.managed-service
