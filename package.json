@@ -53,7 +53,8 @@
     },
     "cds": {
         "features": {
-            "fiori_preview": true
+            "fiori_preview": true,
+            "fiori_routes": true
         },
         "requires": {
             "db": "sql",

@@ -14,6 +14,8 @@ build-parameters:
         # include the.cds for re-use in app
         - cp srv/admin-service.cds gen/srv/srv/
         - mkdir -p gen/srv/db
+        # includes initial data for the app
+        - cp -r db/data gen/srv/db/
         - cp db/schema.cds gen/srv/db/
         - rm gen/srv/srv/csn.json
 modules:
