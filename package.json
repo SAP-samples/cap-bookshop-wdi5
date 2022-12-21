@@ -44,14 +44,17 @@
         "start": "cds run",
         "watch": "cds watch",
         "undeploy": "cf undeploy capire-bookshop --delete-services --delete-service-keys --delete-service-brokers",
-        "build": "rimraf resources mta_archives && mbt build -s '.'",
-        "deploy": "cf deploy mta_archives/*.mtar --retries 1",
+        "build": "rimraf resources mta_archives && mbt build -s .",
+        "deploy": "cf deploy mta_archives/*.mtar -f",
         "wdi5": "wdio app/admin-books/webapp/test/wdi5/wdio.conf.js"
     },
     "engines": {
-        "node": "^14"
+        "node": "^16"
     },
     "cds": {
+        "features": {
+            "fiori_preview": true
+        },
         "hana": {
             "deploy-format": "hdbtable"
         },
