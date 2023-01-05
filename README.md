@@ -1,5 +1,7 @@
 # Automated System Tests for CAP-Based Projects
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cap-bookshop-wdi5)](https://api.reuse.software/info/github.com/SAP-samples/cap-bookshop-wdi5)
+
 ## Description
 This repository contains a sample SAP Fiori application based on SAP Cloud Application Programming Model (CAP). It is used in the following SAP tutorial for developers.
 
