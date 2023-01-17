@@ -32,12 +32,12 @@
         "chai": "^4.3.4",
         "chai-as-promised": "^7.1.1",
         "chai-subset": "^1.6.0",
-        "chromedriver": "^105.0.1",
+        "chromedriver": "latest",
         "rimraf": "^3.0.2",
         "semver": "^7",
         "wdio-chromedriver-service": "^7.3.2",
         "wdio-timeline-reporter": "^5.1.4",
-        "wdio-ui5-service": "1.0.3"
+        "wdio-ui5-service": "lateest"
     },
     "scripts": {
         "genres": "cds serve test/genres.cds",
