@@ -1,11 +1,14 @@
 {
-    "_version": "1.8.0",
+    "_version": "1.1.0",
     "sap.app": {
         "id": "books",
         "type": "application",
         "title": "Manage Books",
         "description": "Sample Application",
         "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.1.0"
+        },
         "dataSources": {
             "AdminService": {
                 "uri": "admin/",
@@ -20,6 +23,10 @@
             "-id": "ui5template.smartTemplate",
             "-version": "1.40.12"
         }
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "demo"
     },
     "sap.ui5": {
         "dependencies": {
@@ -37,7 +44,7 @@
                 "settings": {
                     "synchronizationMode": "None",
                     "operationMode": "Server",
-                    "autoExpandSelect" : true,
+                    "autoExpandSelect": true,
                     "earlyRequests": true,
                     "groupProperties": {
                         "default": {
@@ -71,13 +78,13 @@
                     "id": "BooksList",
                     "name": "sap.fe.templates.ListReport",
                     "options": {
-                        "settings" : {
-                            "entitySet" : "Books",
+                        "settings": {
+                            "entitySet": "Books",
                             "initialLoad": true,
-                            "navigation" : {
-                                "Books" : {
-                                    "detail" : {
-                                        "route" : "BooksDetails"
+                            "navigation": {
+                                "Books": {
+                                    "detail": {
+                                        "route": "BooksDetails"
                                     }
                                 }
                             }
@@ -89,12 +96,12 @@
                     "id": "BooksDetailsList",
                     "name": "sap.fe.templates.ObjectPage",
                     "options": {
-                        "settings" : {
-                            "entitySet" : "Books",
-                            "navigation" : {
-                                "Authors" : {
-                                    "detail" : {
-                                        "route" : "AuthorsDetails"
+                        "settings": {
+                            "entitySet": "Books",
+                            "navigation": {
+                                "Authors": {
+                                    "detail": {
+                                        "route": "AuthorsDetails"
                                     }
                                 }
                             }
@@ -106,8 +113,8 @@
                     "id": "AuthorsDetailsList",
                     "name": "sap.fe.templates.ObjectPage",
                     "options": {
-                        "settings" : {
-                            "entitySet" : "Authors"
+                        "settings": {
+                            "entitySet": "Authors"
                         }
                     }
                 }
