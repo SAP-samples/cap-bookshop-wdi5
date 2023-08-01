@@ -1,4 +1,4 @@
-# Automated System Tests for CAP-Based Projects
+# Automated System Tests for CAP-Based Projects Run CI/CD Pipeline
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cap-bookshop-wdi5)](https://api.reuse.software/info/github.com/SAP-samples/cap-bookshop-wdi5)
 
