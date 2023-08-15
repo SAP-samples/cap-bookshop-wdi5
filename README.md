@@ -3,7 +3,7 @@
 ## Description
 This repository contains a sample SAP Fiori application based on SAP Cloud Application Programming Model (CAP). It is used in the following SAP tutorial for developers.
 
-https://developers.sap.com/tutorials/cp-wdi5-cap.html
+https://developers.sap.com/tutorials/cicd-wdi5-cap.html
 
 ## Requirements & Installation
 
