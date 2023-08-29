@@ -37,7 +37,7 @@
         "semver": "^7",
         "wdio-chromedriver-service": "^7.3.2",
         "wdio-timeline-reporter": "^5.1.4",
-        "wdio-ui5-service": "latest"
+        "wdio-ui5-service": "^1.5.3"
     },
     "scripts": {
         "genres": "cds serve test/genres.cds",
