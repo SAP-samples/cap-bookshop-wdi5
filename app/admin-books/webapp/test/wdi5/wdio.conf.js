@@ -61,7 +61,12 @@ exports.config = {
         browserName: 'chrome',
         acceptInsecureCerts: true,
         "goog:chromeOptions": {
-            args: ["disable-gpu", "--no-sandbox", "--disable-dev-shm-usage"]
+            args:
+                process.argv.indexOf("--headless") > -1
+                    ? ["--headless", "--disable-gpu", "--no-sandbox", "--disable-dev-shm-usage"]
+                    : process.argv.indexOf("--debug") > -1
+                        ? ["window-size=1440,800", "--auto-open-devtools-for-tabs"]
+                        : ["window-size=1440,800"]
         }
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
