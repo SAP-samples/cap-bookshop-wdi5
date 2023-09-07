@@ -5,6 +5,9 @@ exports.config = {
     // ====================
     // Runner Configuration
     // ====================
+    wdi5: {
+        waitForUI5Timeout: 30000
+    },
     //
     //
     // ==================
