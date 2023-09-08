@@ -62,7 +62,7 @@ exports.config = {
         maxInstances: 5,
         "wdi5:authentication": {
             provider: "BasicAuth", //> mandatory
-            basicAuthUrls: ["http://localhost:4004/odata/v4/admin"] //> optional: default is the configured `baseUrl`
+            basicAuthUrls: ["http://localhost:4004/odata/v4/admin/$metadata"] //> optional: default is the configured `baseUrl`
         },
         browserName: 'chrome',
         acceptInsecureCerts: true,
