@@ -60,7 +60,10 @@ exports.config = {
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
         maxInstances: 5,
-        //
+        "wdi5:authentication": {
+            provider: "BasicAuth", //> mandatory
+            basicAuthUrls: ["http://localhost:4004/odata/v4/admin"] //> optional: default is the configured `baseUrl`
+        },
         browserName: 'chrome',
         acceptInsecureCerts: true,
         "goog:chromeOptions": {
