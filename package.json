@@ -39,7 +39,7 @@
         "deploy": "cf deploy gen/mta.tar -f"
     },
     "engines": {
-        "node": "^16"
+        "node": "^18"
     },
     "cds": {
         "features": {
