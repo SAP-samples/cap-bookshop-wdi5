@@ -32,15 +32,6 @@ modules:
           srv-url: ${default-url}
     requires:
       - name: bookshop-auth
-      - name: bookshop-db
-
-  - name: bookshop-db-deployer
-    type: hdb
-    path: gen/db
-    parameters:
-      buildpack: nodejs_buildpack
-    requires:
-      - name: bookshop-db
 
 resources:
   - name: bookshop-auth
@@ -52,8 +43,3 @@ resources:
       config:
         xsappname: bookshop-${org}-${space}
         tenant-mode: dedicated
-  - name: bookshop-db
-    type: com.sap.xs.hdi-container
-    parameters:
-      service: hana
-      service-plan: hdi-shared
