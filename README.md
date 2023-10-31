@@ -17,7 +17,7 @@ No known issues.
 
 ## How to obtain support
 [Create an issue](https://github.com/SAP-samples/cap-bookshop-wdi5/issues) in this repository if you find a bug or have questions about the content.
-Detailed documentation, roadmap and support channels for wdi5-related topics can be found in the [wdi5 repository](https://github.com/ui5-community/wdi5) of the UI5-community.
+Detailed documentation, roadmap and support channels for wdi5-related topics can be found in the [wdi5 repository](https://github.com/ui5-community/wdi5) of the UI5-community!
 For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
 
 ## License
