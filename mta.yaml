@@ -43,3 +43,7 @@ resources:
       config:
         xsappname: bookshop-${org}-${space}
         tenant-mode: dedicated
+        
+  - name: Sap BTP CF CLI Action - Build and Deploy
+    uses: CUBE-CONSULTANTS/cf-deploy@v0.0.2
+            
