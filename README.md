@@ -1,4 +1,4 @@
-# Automated System Tests for CAP-Based Projects
+# Automated system tests for CAP-based projects
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cap-bookshop-wdi5)](https://api.reuse.software/info/github.com/SAP-samples/cap-bookshop-wdi5)
 
@@ -13,7 +13,7 @@ Refer to the prerequisites in the SAP tutorial above.
 
 ## Known Issues
 
-No known issues.
+No known issues!
 
 ## How to obtain support
 [Create an issue](https://github.com/SAP-samples/cap-bookshop-wdi5/issues) in this repository if you find a bug or have questions about the content.
