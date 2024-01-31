@@ -1,0 +1,19 @@
+name: Solution Tests
+on:
+    schedule:
+    # Runs at 12:00, Monday through Friday
+    - cron: "0 12 * * 1-5"
+
+jobs:
+    tests:
+        runs-on: ubuntu-latest
+        steps:
+            - name: check out repo with 'solution' branch
+              uses: actions/checkout@v3
+              with:
+                ref: 'solution'
+            - name: Use node
+              uses: actions/setup-node@v3
+
+            - run: npm ci
+            - run: npm run test-ci
