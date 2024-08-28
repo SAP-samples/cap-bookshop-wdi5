@@ -14,25 +14,25 @@
     "app/admin-books"
   ],
   "dependencies": {
-    "@sap/cds": "^7.2.0",
-    "@sap/cds-dk": "^7.2.0",
+    "@sap/cds": "^8.1.1",
+    "@sap/cds-dk": "^8.1.2",
     "@sap/cds-odata-v2-adapter-proxy": "^1.9.21",
-    "@sap/xssec": "^3",
-    "express": "^4.18.2",
-    "passport": ">=0.6.0",
+    "@sap/xssec": "^4",
+    "express": "^4.19.2",
+    "passport": ">=0.7.0",
     "sqlite3": "^5"
   },
   "devDependencies": {
-    "@sap/ux-specification": "^1.108.13",
+    "@sap/ux-specification": "^1.120.17",
     "@wdio/cli": "^8.16.4",
     "@wdio/local-runner": "^8.16.4",
     "@wdio/mocha-framework": "^8.16.3",
     "@wdio/spec-reporter": "^8.16.3",
     "axios": "^1",
-    "chai": "^4.3.8",
-    "chai-as-promised": "^7.1.1",
+    "chai": "^5.1.1",
+    "chai-as-promised": "^8.0.0",
     "chai-subset": "^1.6.0",
-    "rimraf": "^5.0.1",
+    "rimraf": "^6.0.1",
     "semver": "^7",
     "wdio-chromedriver-service": "^8.1.1",
     "wdio-timeline-reporter": "^5.1.4",
@@ -48,7 +48,7 @@
     "wdi5": "wdio app/admin-books/webapp/test/wdi5/wdio.conf.js"
   },
   "engines": {
-    "node": "^16"
+    "node": "^20"
   },
   "cds": {
     "features": {
