@@ -155,7 +155,6 @@ exports.config = {
             {
                 outputDir: "target",
                 embedImages: true,
-                screenshotStrategy: "before:click",
             },
         ],
     ],
